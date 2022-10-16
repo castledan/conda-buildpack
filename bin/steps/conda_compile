@@ -19,6 +19,7 @@ conda install nomkl
 if [ -f conda-requirements.txt ]; then
     puts-step "Installing q-ta-lib using Conda"
     conda install -c conda-forge ta-lib
+    conda install --file conda-requirements.txt --yes | indent
 fi
 
 if [ -f requirements.txt ]; then
